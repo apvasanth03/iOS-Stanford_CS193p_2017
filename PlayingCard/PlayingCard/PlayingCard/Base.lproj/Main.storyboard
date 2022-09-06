@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayingCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EoE-it-g2m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FT9-de-3p0" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                                <rect key="frame" x="16" y="147.5" width="382" height="611"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="800" id="Ewg-Ki-tVB"/>
+                                    <constraint firstAttribute="width" secondItem="FT9-de-3p0" secondAttribute="height" multiplier="5:8" id="zWI-Ah-oYg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5gO-FQ-m31" appends="YES" id="vIL-wP-wvj"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bb4-Qs-1tj"/>
+                        <color key="backgroundColor" red="1" green="0.770712972" blue="0.16364485719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FT9-de-3p0" firstAttribute="centerX" secondItem="bb4-Qs-1tj" secondAttribute="centerX" id="81u-wA-2aB"/>
+                            <constraint firstItem="FT9-de-3p0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bb4-Qs-1tj" secondAttribute="top" constant="16" id="RRQ-af-R44"/>
+                            <constraint firstItem="bb4-Qs-1tj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FT9-de-3p0" secondAttribute="trailing" constant="16" id="Uci-Dj-Kd6"/>
+                            <constraint firstItem="bb4-Qs-1tj" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FT9-de-3p0" secondAttribute="bottom" constant="16" id="Y5t-xP-GhD"/>
+                            <constraint firstItem="FT9-de-3p0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bb4-Qs-1tj" secondAttribute="leading" constant="16" id="kPF-0s-oIS"/>
+                            <constraint firstItem="FT9-de-3p0" firstAttribute="centerY" secondItem="bb4-Qs-1tj" secondAttribute="centerY" id="vhw-R3-GRF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="FT9-de-3p0" id="XCD-go-B5J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5gO-FQ-m31">
+                    <connections>
+                        <action selector="flipCard:" destination="BYZ-38-t0r" id="vZu-Qn-ddK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="139" y="117"/>
+        </scene>
+    </scenes>
+</document>
